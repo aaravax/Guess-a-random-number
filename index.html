@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Guess a random number from 1 to 10!</h2>
+    <br>
+    <input type="number" id = "input">
+    <button onclick = "matchnumbers()">Guess!</button>
+    <br>
+    <h3 id = "text"></h3>
+    <br>
+    <img src="" id = "smart">
+<br>
+
+     </body>
+<script>
+    // console.log(Math.round(11.3))
+    // console.log(Math.round(6.7))
+    // console.log(Math.floor(7.999999))
+    // console.log(Math.ceil(2.0000000000001))
+    // console.log(Math.max(999, 234, 567, 8901, 1234, 6789, 334))
+    // console.log(Math.min(999, 234, 567, 8901, 1234, 6789, 334))
+    // console.log(Math.ceil(23.4*67.8))
+
+function matchnumbers(){
+    document.getElementById("smart").hidden
+   
+   var compnumber = Math.floor(Math.random()*10+1)
+   console.log(compnumber)
+   var userinput = document.getElementById("input").value
+   if(compnumber === parseInt(userinput) ){
+       document.getElementById("text").innerHTML = ("You guessed the right number!")
+       document.getElementById("smart").src="https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg"
+   }
+   else {
+       document.getElementById("text").innerHTML = ("You guessed the wrong number!")
+   }
+}
+
+
+   
+</script>
+
+</html>
